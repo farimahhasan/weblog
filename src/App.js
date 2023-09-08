@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+/* import { gql, useQuery } from "@apollo/client";
+
+const QUERY = gql`
+query {
+  authors{
+    name
+  }
+}
+` 
 
 function App() {
+   const{loading,data}=useQuery(QUERY);
+  console.log({loading,data}) 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>hi</div>
   );
 }
+
+export default App;*/
+
+
+import React from 'react';
+import Home from './components/Home';
+import Layout from './components/layout';
+import AuthorPage from './components/AuthorPage';
+import BlogPage from './components/BlogPage';
+import { Route, Routes } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
+const App = () => {
+  return (
+     <Layout>
+      <ScrollToTop />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/author/:slug' element={<AuthorPage />} />
+        <Route path='/blog/:slug' element={<BlogPage />} />
+      </Routes>
+      </Layout>
+
+  );
+};
 
 export default App;

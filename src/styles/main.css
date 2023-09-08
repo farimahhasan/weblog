@@ -1,0 +1,108 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111827;
+}
+#header img{
+    width: 100%;
+}
+#header h1{
+    background-image: linear-gradient(to left,#3B82F6 , #D946EF  );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5em;
+    display:inline-block
+}
+.btn{
+    background-image: linear-gradient(to left,#3B82F6 , #D946EF   );
+}
+.MuiCard-root{
+position: relative;   
+overflow: visible !important;
+}
+.gradiant{
+   content:"";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: -20px;
+   left: -20px;
+   z-index: -1;
+   border-radius: inherit;
+   background-image: linear-gradient(to left,#3B82F6 , #D946EF   );
+}
+
+#content-blog{
+  color: rgb(235, 235, 235);
+}
+
+.input-data{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    position: relative;
+  }
+.input-data input,
+.textarea textarea{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid  rgb(235, 235, 235);
+  outline: none;
+  background-color: transparent;
+  color: rgb(235, 235, 235);
+  font-weight: bold;
+}
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #3B82F6;
+}
+
+.input-data label{
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  color: rgb(235, 235, 235);
+  }
+  .textarea label{
+    width: 100%;
+    bottom: 20px;
+  }
+  .input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+  }
+  .input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-image: linear-gradient(to left,#3B82F6 , #D946EF   );
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  .input-data input:focus ~ .underline:before,
+  .input-data input:valid ~ .underline:before,
+  .textarea textarea:focus ~ .underline:before,
+  .textarea textarea:valid ~ .underline:before{
+    transform: scale(1);
+  }
+
+  textarea{
+    resize: none;
+  }
