@@ -45,7 +45,7 @@ query getAuthor($slug:String!) {
     description {
       html
     }
-  }
+  
   posts {
     title
     coverPhoto {
@@ -55,7 +55,7 @@ query getAuthor($slug:String!) {
     id
   }
 }
-
+}
 `
 
 const GET_POST=gql`

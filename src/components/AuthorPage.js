@@ -44,7 +44,7 @@ const AuthorPage = () => {
                      مقالات {data.author.name}
                 </Typography>
                 <Grid container spacing={2} p={3}>
-                   {data.posts.map(post=>(
+                   {data.author.posts.map(post=>(
                      <Grid item key={post.id} xs={12} sm={6} md={4}>
                         <CardPost title={post.title} coverPhoto={post.coverPhoto} slug={post.slug} />
                      </Grid>
